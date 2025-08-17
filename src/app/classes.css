@@ -1,0 +1,209 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Padding */
+.container {
+    max-width : 1240px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+  cursor: none;
+}
+
+/* Make all paragraphs fit width */
+h1 , h2 , h3 , h4 , h5 , p , a {
+  width: fit-content !important;
+}
+
+@media (max-width : 1300px) {
+  .px {
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+}
+
+@media (max-width : 900px) {
+  .px {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+
+/* Hide the arrows in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Start Scrollbar */
+::-webkit-scrollbar{
+	width: 7px;
+  height: 0px;
+}
+::-webkit-scrollbar-track{
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+	background-color: #4B2615;	
+	background-image: 
+  -webkit-linear-gradient(45deg,
+  rgba(255, 255, 255, .2) 25%,
+  transparent 25%,
+  transparent 50%,
+  rgba(255, 255, 255, .2) 50%,
+  rgba(255, 255, 255, .2) 75%,
+  transparent 75%,
+  transparent)
+}
+/* End Scrollbar */
+
+
+/* Btn Effect */
+.btn-hover {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-hover span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to left, #FFF, #070B13) ;
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  } 100% {
+    transform: translateX(100%);
+  }
+}
+
+.btn-hover span:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to bottom, #FFF, #070B13) ;
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateY(100%);
+  } 100% {
+    transform: translateY(-100%);
+  }
+}
+
+.btn-hover span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to top, #FFF, #070B13) ;
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateY(-100%);
+  } 100% {
+    transform: translateY(100%);
+  }
+}
+
+.btn-hover span:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, #FFF, #070B13) ;
+  animation: animate4 2s linear infinite;
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(100%);
+  } 100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Gradiant Style */
+.slider-grad {
+  position: relative;
+}
+
+.slider-grad::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    271deg,
+    rgba(75, 38, 21, 0.28) 1.2%,
+    rgba(75, 38, 21, 0.68) 86.38%
+  );
+  pointer-events: none; /* so clicks pass through */
+}
+
+/* Bullet */
+.hero-swiper .swiper-pagination {
+  left: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.hero-swiper .custom-bullet {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 0 6px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active.custom-bullet {
+  background: white;
+  opacity: 1;
+}
+
+.hero-swiper .custom-bullet:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}

@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@layer base {
+  :root {
+    --primary: 19, 56%, 19%;
+  }
+  body {
+    @apply text-white
+  }
+}
+
+/* Custom Swiper Styles */
+.team-swiper .swiper-button-next,
+.team-swiper .swiper-button-prev {
+  color: rgb(var(--primary));
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-swiper .swiper-button-next:after,
+.team-swiper .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.team-swiper .swiper-pagination-bullet {
+  background: rgb(var(--primary));
+  opacity: 0.3;
+}
+
+.team-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: rgb(var(--primary));
+}
