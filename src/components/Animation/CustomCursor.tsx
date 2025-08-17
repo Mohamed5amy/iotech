@@ -70,14 +70,14 @@ export default function CustomCursor() {
   return (
     <>
       {/* Primary circle (direct follower) */}
-      <div className={`fixed w-4 h-4 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform ease-out z-50 duration-500 ${isHoveringText && "hidden"} ${isHoveringText ? "bg-black" : "bg-white"} ${isClicked ? 'scale-[4]' : 'scale-1'}`} style={{top: `${mousePosition.y}px`, left: `${mousePosition.x}px`}}></div>
+      <div className={`fixed opacity-0 md:opacity-100 w-4 h-4 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform ease-out z-50 duration-500 ${isHoveringText && "hidden"} ${isHoveringText ? "bg-black" : "bg-white"} ${isClicked ? 'scale-[4]' : 'scale-1'}`} style={{top: `${mousePosition.y}px`, left: `${mousePosition.x}px`}}></div>
 
       {/* Secondary circle (delayed follower) */}
-      <div className={`fixed w-8 h-8 border-2 z-50 border-white rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out ${isHoveringText && "hidden"}`} style={{top: `${trailPosition.y}px`, left: `${trailPosition.x}px`}}
+      <div className={`fixed opacity-0 md:opacity-100 w-8 h-8 border-2 z-50 border-white rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out ${isHoveringText && "hidden"}`} style={{top: `${trailPosition.y}px`, left: `${trailPosition.x}px`}}
       ></div>
 
       {/* Cursor mask layer */}
-        <div className={`fixed w-4 h-4 transition-all rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference ${
+        <div className={`fixed opacity-0 md:opacity-100 w-4 h-4 transition-all rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference ${
             isHoveringText ? 'bg-white scale-[5]' : 'bg-transparent'
         } transition-transform duration-300 ease-out ${isClicked && 'scale-[7]'}`}
         style={{

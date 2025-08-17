@@ -8,13 +8,14 @@ import { Autoplay } from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css'
+import AnimatedTitle from '@/components/Animation/AnimatedTitle'
 
 const Team = () => {
   return (
     <div className="py-10 md:py-28 bg-[#F3F3F3]">
       <div className="container">
-        <h3 className='mx-auto text-primary text-[36px] md:text-[42px] font-bold mb-2 md:mb-5'> Our Team </h3>
-        <p className='mx-auto max-w-[770px] text-center font-medium text-[#1E1E1E] mb-8 md:mb-20'>
+        <AnimatedTitle className='mx-auto text-primary text-[36px] md:text-[42px] font-bold mb-2 md:mb-5'> Our Team </AnimatedTitle>
+        <p data-aos="fade-up" className='mx-auto max-w-[770px] text-center font-medium text-[#1E1E1E] mb-8 md:mb-20'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s
         </p>
         {/* Team Swiper */}

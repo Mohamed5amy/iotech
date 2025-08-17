@@ -9,6 +9,7 @@ import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { useRef } from 'react'
+import AnimatedTitle from '@/components/Animation/AnimatedTitle'
 
 const Clients = () => {
   const swiperRef = useRef<{ swiper: SwiperType }>(null)
@@ -50,8 +51,8 @@ const Clients = () => {
   return (
     <div className='bg-primary py-10 md:py-24 mb-7'>
       <div className="container">
-        <h3 className='text-[32px] leading-9 md:text-[40px] font-bold mb-2 md:mb-6'>What our clients are saying</h3>
-        <p className='max-w-[580px] text-lg opacity-70 mb-8 md:mb-16'>
+        <AnimatedTitle className='text-[32px] leading-9 md:text-[40px] font-bold mb-2 md:mb-6'>What our clients are saying</AnimatedTitle>
+        <p data-aos="fade-left" className='max-w-[580px] text-lg opacity-70 mb-8 md:mb-16'>
           Our clients range from individual investors, to local, international as well as fortune 500 companies.Our clients range from individual investors, to local, international as well as fortune 500 companies.
         </p>
         

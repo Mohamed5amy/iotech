@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between relative">
         {/* Logo */}
-        <Image src={"/images/logo.svg"} alt="Logo" width={120} height={100} />
+        <Image src={"/images/logo.svg"} alt="Logo" width={120} height={100} className="w-[90px] md:w-[120px]" />
         {/* Link List */}
         <div className="items-center hidden lg:flex">
           {list.map((item , idx) => {

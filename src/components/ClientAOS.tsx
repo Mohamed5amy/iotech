@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 export default function ClientAOS() {
   useEffect(() => {
-    AOS.init({ duration: 1000 , once : true });
+    AOS.init({ duration: 1500 , once : true });
   }, []);
 
   return null; // No UI, just runs AOS

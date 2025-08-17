@@ -1,3 +1,4 @@
+import AnimatedTitle from '@/components/Animation/AnimatedTitle'
 import Magnetic from '@/components/Animation/Magnetic'
 import Button from '@/components/UI/Button'
 import HeroSlider from '@/components/UI/HeroSlider'
@@ -13,17 +14,19 @@ const Hero = () => {
           {/* Content */}
           <div className='flex-[2]'>
             {/* Title */}
-            <h3 className='text-[40px] font-bold mb-2 md:mb-8'>Lorem Ipsum</h3>
+            <AnimatedTitle className='text-[40px] font-bold mb-2'>Lorem Ipsum</AnimatedTitle>
             {/* Description */}
-            <p className='text-lg font-medium'>
+            <p className='text-lg font-medium' data-aos="fade-up">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s
             </p>
             {/* Button */}
+            <div data-aos="fade-up" data-aos-delay="300">
             <Button label='Read More' className='py-4 px-9 bg-white text-primary mt-4 md:mt-16 hover:bg-primary hover:text-white font-medium' />
+            </div>
           </div>
           {/* Image */}
           <Magnetic className='flex-1 !hidden md:!inline-block' strength={.05}>
-            <Image src={"/images/lawyer.svg"} alt='Bin Hindi' width={374} height={374} />
+            <Image src={"/images/lawyer.svg"} alt='Bin Hindi' width={374} height={374} data-aos="zoom-in" />
           </Magnetic>
         </div>
       </div>
