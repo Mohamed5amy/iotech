@@ -49,7 +49,7 @@ const Clients = () => {
   }
 
   return (
-    <div className='bg-primary py-10 md:py-24 mb-7'>
+    <div className='bg-primary py-10 md:py-24 mb-7 overflow-hidden'>
       <div className="container">
         <AnimatedTitle className='text-[32px] leading-9 md:text-[40px] font-bold mb-2 md:mb-6'>What our clients are saying</AnimatedTitle>
         <p data-aos="fade-left" className='max-w-[580px] text-lg opacity-70 mb-8 md:mb-16'>
