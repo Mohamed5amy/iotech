@@ -5,20 +5,26 @@ import gsap from "gsap";
 import SplitText from "gsap/dist/SplitText";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
-gsap.registerPlugin(SplitText , ScrollTrigger);
+interface AnimatedTitleProps {
+  children: ReactNode;
+  className?: string;
+  delay?: boolean;
+}
 
-const AnimatedTitle = ({ children, className = "" , delay } : {children : ReactNode , className : string , delay? : boolean}) => {
-  const titleRef : any = useRef(null);
+const AnimatedTitle = ({ children, className = "", delay = false }: AnimatedTitleProps) => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    let split : any;
-    let anim : any;
+    let split: SplitText | null = null;
+    let anim: gsap.core.Tween | null = null;
 
     if (titleRef.current) {
       // Detect if the text is Arabic
       const textContent = titleRef.current.textContent || "";
       const isArabic = /[\u0600-\u06FF]/.test(textContent);
+      
       // Split text
       split = new SplitText(titleRef.current, {
         type: isArabic ? "words" : "chars,words",
@@ -55,7 +61,7 @@ const AnimatedTitle = ({ children, className = "" , delay } : {children : ReactN
       // Revert SplitText
       if (split) split.revert();
     };
-  }, []);
+  }, [delay]); // Added delay to dependency array
 
   return (
     <h3 ref={titleRef} className={className}>

@@ -61,4 +61,7 @@ const MenuToggle = forwardRef(({ active, setActive }: {
   );
 });
 
+// Add display name to fix the linting error
+MenuToggle.displayName = "MenuToggle";
+
 export default MenuToggle;

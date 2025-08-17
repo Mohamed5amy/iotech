@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useState, useRef } from "react";
 import MenuToggle, { MenuToggleRef } from "./MenuToggle";
-import useIsAuthenticated from "react-auth-kit/hooks/useIsAuthenticated";
-import useSignOut from "react-auth-kit/hooks/useSignOut";
 
 const Menu = () => {
   const [active, setActive] = useState(false);
