@@ -3,25 +3,28 @@ import Magnetic from '@/components/Animation/Magnetic'
 import Button from '@/components/UI/Button'
 import HeroSlider from '@/components/UI/HeroSlider'
 import Image from 'next/image'
-import React from 'react'
+import { getTranslations } from 'next-intl/server'
 
-const Hero = () => {
+const Hero = async () => {
+
+  const t = await getTranslations('home.hero')
+  
   return (
     <div className='h-screen bg-primary relative'>
       <HeroSlider />
       <div className='absolute inset-0 max-w-[1240px] ms-12 me-2 md:mx-12 xl:mx-auto flex items-center justify-center z-10'>
-        <div className="flex items-center justify-between gap-20">
+        <div className="flex items-center justify-between gap-20 w-full">
           {/* Content */}
-          <div className='flex-[2]'>
+          <div className='flex-[2] text-start'>
             {/* Title */}
-            <AnimatedTitle className='text-[40px] font-bold mb-2'>Lorem Ipsum</AnimatedTitle>
+            <AnimatedTitle className='text-[28px] md:text-[40px] font-bold mb-4 leading-8'>{t('title')}</AnimatedTitle>
             {/* Description */}
             <p className='text-lg font-medium' data-aos="fade-up">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s
+              {t('desc')}
             </p>
             {/* Button */}
             <div data-aos="fade-up" data-aos-delay="300">
-            <Button label='Read More' className='py-4 px-9 bg-white text-primary mt-4 md:mt-16 hover:bg-primary hover:text-white font-medium' />
+            <Button label={t('cta')} className='py-4 px-9 bg-white text-primary mt-4 md:mt-16 hover:bg-primary hover:text-white font-medium' />
             </div>
           </div>
           {/* Image */}

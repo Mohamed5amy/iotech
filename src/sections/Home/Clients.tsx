@@ -10,29 +10,32 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import { useRef } from 'react'
 import AnimatedTitle from '@/components/Animation/AnimatedTitle'
+import { useLocale, useTranslations } from 'next-intl'
 
 const Clients = () => {
   const swiperRef = useRef<{ swiper: SwiperType }>(null)
+  const t = useTranslations('home.clients')
+  const locale = useLocale()
 
   // Sample reviews data - you can replace these with your actual reviews
   const reviews = [
     {
       image: "/images/lawyer.svg",
-      name: "Mohammed Saif",
-      position: "CEO/Company",
-      comment: "With the help of the hospitable staff of Al Safar and Partners I was able to get my work done without any hassle. The help I received helped me a great deal to overcome the issues that I faced."
+      name: t('reviews.review1.name'),
+      position: t('reviews.review1.position'),
+      comment: t('reviews.review1.comment')
     },
     {
       image: "/images/lawyer.svg",
-      name: "Sarah Johnson",
-      position: "Marketing Director",
-      comment: "The team at Al Safar and Partners exceeded our expectations. Their professional approach and attention to detail made our project successful. Highly recommended for any business needs."
+      name: t('reviews.review2.name'),
+      position: t('reviews.review2.position'),
+      comment: t('reviews.review2.comment')
     },
     {
       image: "/images/lawyer.svg",
-      name: "Ahmed Hassan",
-      position: "Project Manager",
-      comment: "Working with Al Safar and Partners has been a game-changer for our company. Their expertise and dedication have helped us achieve remarkable results in record time."
+      name: t('reviews.review3.name'),
+      position: t('reviews.review3.position'),
+      comment: t('reviews.review3.comment')
     }
   ]
 
@@ -51,15 +54,16 @@ const Clients = () => {
   return (
     <div className='bg-primary py-10 md:py-24 mb-7 overflow-hidden'>
       <div className="container">
-        <AnimatedTitle className='text-[32px] leading-9 md:text-[40px] font-bold mb-2 md:mb-6'>What our clients are saying</AnimatedTitle>
+        <AnimatedTitle className='text-[32px] leading-9 md:text-[40px] font-bold mb-2 md:mb-6'>{t('title')}</AnimatedTitle>
         <p data-aos="fade-left" className='max-w-[580px] text-lg opacity-70 mb-8 md:mb-16'>
-          Our clients range from individual investors, to local, international as well as fortune 500 companies.Our clients range from individual investors, to local, international as well as fortune 500 companies.
+          {t('desc')}
         </p>
         
         {/* Reviews Slider */}
         <div className='relative'>
            <Swiper
-              style={{width : "100%"}}
+             style={{width : "100%"}}
+             dir='ltr'
              ref={swiperRef}
              grabCursor
              mousewheel
@@ -89,7 +93,7 @@ const Clients = () => {
              className="reviews-swiper h-[650px] md:h-[400px]"
            >
             {reviews.map((review, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} dir={locale === "en" ? "ltr" : 'rtl'}>
                 <div className='flex gap-12 flex-col md:flex-row'>
                   {/* Image */}
                   <Magnetic className='flex-1' strength={.05}>
@@ -118,14 +122,14 @@ const Clients = () => {
           {/* Left Arrow */}
           <button 
             onClick={goPrev}
-            className='w-16 h-16 disabled:bg-white/10 bg-white rounded-full flex items-center justify-center text-primary transition-colors hover:bg-white/60 disabled:hover:bg-white/10'
+            className='rtl:rotate-180 ltr:rotate-0 w-16 h-16 disabled:bg-white/10 bg-white rounded-full flex items-center justify-center text-primary transition-colors hover:bg-white/60 disabled:hover:bg-white/10'
           > 
             {arrowIcon} 
           </button>
           {/* Right Arrow */}
           <button 
             onClick={goNext}
-            className='w-16 h-16 bg-white rounded-full flex items-center justify-center rotate-180 text-primary transition-colors hover:bg-white/60'
+            className='rtl:rotate-0 ltr:rotate-180 w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary transition-colors hover:bg-white/60'
           > 
             {arrowIcon} 
           </button>

@@ -1,0 +1,118 @@
+{
+  "home" : {
+    "hero" : {
+      "title" : "Your trusted legal partner",
+      "desc" : "We provide expert guidance and representation. We provide expert guidance and representation.We provide expert guidance and representation.",
+      "cta" : "Read More"
+    },
+    "team": {
+      "title": "Our Team",
+      "desc": "Meet the professionals dedicated to protecting your rights and interests.",
+      "memberName": "Name Here",
+      "memberPosition": "Position Here"
+    },
+    "clients": {
+      "title": "What our clients are saying",
+      "desc": "Our clients range from individual investors, to local, international as well as Fortune 500 companies.",
+      "reviews": {
+        "review1": {
+          "name": "Mohammed Saif",
+          "position": "CEO/Company",
+          "comment": "With the help of the hospitable staff of Al Safar and Partners I was able to get my work done without any hassle. The help I received helped me a great deal to overcome the issues that I faced."
+        },
+        "review2": {
+          "name": "Sarah Johnson",
+          "position": "Marketing Director",
+          "comment": "The team at Al Safar and Partners exceeded our expectations. Their professional approach and attention to detail made our project successful. Highly recommended for any business needs."
+        },
+        "review3": {
+          "name": "Ahmed Hassan",
+          "position": "Project Manager",
+          "comment": "Working with Al Safar and Partners has been a game-changer for our company. Their expertise and dedication have helped us achieve remarkable results in record time."
+        }
+      }
+    }
+  }
+  ,
+  "service": {
+    "details": {
+      "title": "Legal Consultation Services",
+      "intro": "Law Firm is one of the leading legal offices that offer exceptional advisory services for both individuals and companies. Our mission is to provide comprehensive and specialized legal support to meet our clients' needs and offer the best legal solutions in various cases and legal fields, we provide our legal consultations services as a follow:",
+      "sections": {
+        "general": {
+          "title": "General Legal Consultations",
+          "body": "At Law Firm, we provide comprehensive legal consultations covering all legal aspects that our clients may encounter in their daily lives or business activities. Our goal is to offer accurate legal advice based on a deep understanding of local and international laws."
+        },
+        "corporate": {
+          "title": "Corporate Legal Consultations",
+          "intro": "We at the Law Firm understand the importance of legal consultations for companies in building and enhancing their businesses.\n\nOur advisory services about:",
+          "list": [
+            "Establishing and registering companies.",
+            "All kinds of contracts and agreements.",
+            "Commercial disputes.",
+            "Compliance with local and international laws and regulations."
+          ]
+        },
+        "individual": {
+          "title": "Individual Legal Consultations",
+          "intro": "Law Firm offers customized advisory services for individuals, including:",
+          "list": [
+            "Family issues such as divorce, alimony, and custody.",
+            "Real estate matters like buying, selling, and renting properties.",
+            "Employment issues such as hiring and wrongful termination.",
+            "Criminal cases and defending personal rights."
+          ]
+        }
+      },
+      "footer": "At  Law Firm, we aim to provide the best legal services to ensure your rights and offer effective legal solutions. Contact us today to receive professional and comprehensive legal consultation."
+    }
+  }
+  ,
+  "components" : {
+    "Back" : "Back",
+    "search" : "Search...",
+    "footer" : {
+      "about": "About",
+      "ourStrategy": "Our Strategy",
+      "ourAdvantages": "Our Advantages",
+      "socialResponsibility": "Social Responsibility",
+      "ourServices": "Our Services",
+      "allRightsReserved": "All rights reserved.",
+      "emailPlaceholder": "Email",
+      "button": "Subscribe",
+      "Invalid email address" : "Invalid email address",
+      "Email is required" : "Email is required",
+      "Congrats, You are now subscribed!" : "Congrats, You are now subscribed!"
+    },
+    "menu": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "services": "Services",
+      "blog": "Blog",
+      "ourTeam": "Our Team",
+      "contactUs": "Contact Us",
+      "bookAppointment": "Book Appointment"
+    }
+  },
+  "services": {
+    "corporateLaw": "Corporate Law",
+    "realEstateLaw": "Real Estate Law",
+    "familyLaw": "Family Law",
+    "criminalLaw": "Criminal Law",
+    "intellectualProperty": "Intellectual Property",
+    "employmentLaw": "Employment Law",
+    "immigrationLaw": "Immigration Law",
+    "bankingFinance": "Banking & Finance",
+    "commercialContracts": "Commercial Contracts",
+    "taxLaw": "Tax Law",
+    "litigation": "Litigation",
+    "arbitration": "Arbitration",
+    "insuranceLaw": "Insurance Law",
+    "constructionLaw": "Construction Law",
+    "consumerProtection": "Consumer Protection",
+    "cyberSecurity": "Cybersecurity Law",
+    "dataProtection": "Data Protection",
+    "mergersAcquisitions": "Mergers & Acquisitions",
+    "internationalTrade": "International Trade"
+  }
+}

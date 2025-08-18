@@ -187,6 +187,17 @@ input {
   width: fit-content;
 }
 
+/* RTL/LTR aware positioning for pagination */
+[dir="ltr"] .hero-swiper .swiper-pagination {
+  left: 10px !important;
+  right: auto !important;
+}
+
+[dir="rtl"] .hero-swiper .swiper-pagination {
+  right: 10px !important;
+  left: auto !important;
+}
+
 .hero-swiper .custom-bullet {
   width: 12px;
   height: 12px;

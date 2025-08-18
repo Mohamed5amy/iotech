@@ -9,14 +9,16 @@ import { Autoplay } from 'swiper/modules'
 // Import Swiper styles
 import 'swiper/css'
 import AnimatedTitle from '@/components/Animation/AnimatedTitle'
+import { useTranslations } from 'next-intl'
 
 const Team = () => {
+  const t = useTranslations('home.team')
   return (
     <div className="py-10 md:py-28 bg-[#F3F3F3]">
       <div className="container">
-        <AnimatedTitle className='mx-auto text-primary text-[36px] md:text-[42px] font-bold mb-2 md:mb-5'> Our Team </AnimatedTitle>
+        <AnimatedTitle className='mx-auto text-primary text-[36px] md:text-[42px] font-bold mb-2 md:mb-5'> {t('title')} </AnimatedTitle>
         <p data-aos="fade-up" className='mx-auto max-w-[770px] text-center font-medium text-[#1E1E1E] mb-8 md:mb-20'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s
+          {t('desc')}
         </p>
         {/* Team Swiper */}
         <Swiper
@@ -62,13 +64,14 @@ const Team = () => {
 }
 
 const TeamMember = () => {
+  const t = useTranslations('home.team')
   return (
     <div className='flex flex-col items-center'>
       {/* Image */}
       <div className='h-[250px] mb-4 w-full overflow-hidden'> <Image src={"/images/lawyer.svg"} width={500} height={185} alt='Lawyer Image' className='w-full h-full object-cover transition-all hover:scale-105 grayscale-[.8] hover:grayscale-0' /> </div>
       {/* Content */}
-      <h2 className='text-primary text-2xl font-medium mb-2.5'> Name Here </h2>
-      <p className='text-sm font-bold text-[rgba(21,20,57,0.40)] uppercase tracking-widest mb-2.5'>Position Here</p>
+      <h2 className='text-primary text-2xl font-medium mb-2.5'> {t('memberName')} </h2>
+      <p className='text-sm font-bold text-[rgba(21,20,57,0.40)] uppercase tracking-widest mb-2.5'>{t('memberPosition')}</p>
       <div className='flex items-center gap-3 justify-center'>
         <Whatsapp />
         <Phone />

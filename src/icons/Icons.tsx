@@ -8,6 +8,8 @@ import emailAnimation from "./email.json"
 import twitterAnimation from "./twitter.json"
 import facebookAnimation from "./facebook.json"
 import googleAnimation from "./google.json"
+import SearchBox from "@/components/UI/SearchBox"
+import { useState } from "react"
 
 const HoverLottie = dynamic(() => import("@/components/HoverLottie"), {
   loading: () => <div>Loading...</div>,
@@ -15,13 +17,19 @@ const HoverLottie = dynamic(() => import("@/components/HoverLottie"), {
 })
 
 export const Search = () => {
+  const [open, setOpen] = useState(false)
   return (
-    <HoverLottie 
-      icon={searchAnimation}
-      w={36}
-      h={36}
-      play={false}
-    />
+    <>
+      <div onClick={() => setOpen(true)}>
+        <HoverLottie 
+          icon={searchAnimation}
+          w={36}
+          h={36}
+          play={false}
+        />
+      </div>
+      <SearchBox open={open} onClose={() => setOpen(false)} />
+    </>
   )
 }
 
